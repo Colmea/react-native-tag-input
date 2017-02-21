@@ -271,7 +271,7 @@ class TagInput extends Component {
 
     const inputProps = { ...defaultInputProps, ...this.props.inputProps };
 
-    const wrapperHeight = (lines - 1) * 40 + 36;
+    const wrapperHeight = (lines - 1) * 40 + 55;
 
     const width = inputWidth ? inputWidth : 400;
 
