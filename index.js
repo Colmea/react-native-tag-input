@@ -111,7 +111,7 @@ class TagInput extends Component {
     if (!this.refs.wrapper)
       return;
 
-    this.refs.wrapper.measure((ox, oy, w, /*h, px, py*/) => {
+    this.refs.wrapper.measureInWindow((ox, oy, w, /*h, px, py*/) => {
       this.wrapperWidth = w;
       this.setState({ inputWidth: this.wrapperWidth });
     });
@@ -122,7 +122,7 @@ class TagInput extends Component {
       if (!this.refs['tag' + (this.props.value.length - 1)])
         return;
 
-      this.refs['tag' + (this.props.value.length - 1)].measure((ox, oy, w, /*h, px, py*/) => {
+      this.refs['tag' + (this.props.value.length - 1)].measureInWindow((ox, oy, w, /*h, px, py*/) => {
         const endPosOfTag = w + ox;
         const margin = 3;
         const spaceLeft = this.wrapperWidth - endPosOfTag - margin - 10;
